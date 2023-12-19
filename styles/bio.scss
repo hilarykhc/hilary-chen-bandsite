@@ -1,0 +1,22 @@
+@use "./partials/resets";
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
+.hero {
+  background-image: url(/assets/Images/hero-bio.jpg);
+  background-size: cover;
+  position: relative;
+  height: 28.75rem;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bandsite-black;
+    opacity: 0.5;
+  }
+}
