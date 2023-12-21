@@ -43,6 +43,18 @@ body {
   width: 11.25rem;
 }
 
+@media screen and (min-width: 768px) {
+  .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem 2.25rem;
+  }
+
+  .header {
+    height: 7.2rem;
+  }
+}
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -57,10 +69,11 @@ body {
 }
 .nav__item--active {
   border-bottom: 5px solid #fff;
-  padding-bottom: 1.4rem;
+  padding-bottom: 1.15rem;
   width: 50%;
 }
-.nav__link, .nav__link--active {
+.nav__link,
+.nav__link--active {
   color: #fff;
   text-decoration: none;
 }
@@ -68,6 +81,18 @@ body {
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-left: 2rem;
+  }
+  .nav__list {
+    margin-top: 2rem;
+  }
+
+  .nav__item--active {
+    padding-bottom: 2rem;
+  }
+}
 .hero {
   background-image: url(/assets/Images/hero-bio.jpg);
   background-size: cover;
@@ -106,20 +131,25 @@ body {
 .musicians__quote--title {
   font-size: xx-large;
   padding: 1.5rem 1rem 1rem 1rem;
+  color: #323232;
 }
 .musicians__quote--description {
   font-weight: bold;
   font-size: large;
   padding: 1rem 1rem 2rem 1rem;
   letter-spacing: 0.05rem;
+  color: #323232;
 }
 .musicians__about--title {
-  font-size: medium;
+  font-size: large;
+  font-weight: normal;
   padding: 0 1rem 1rem 1rem;
 }
-.musicians__about--description-1, .musicians__about--description-2 {
+.musicians__about--description-1,
+.musicians__about--description-2 {
   padding: 0 1rem;
   letter-spacing: 0.02rem;
+  color: #323232;
 }
 .musicians__about--description-2 {
   padding-bottom: 1rem;
@@ -131,6 +161,7 @@ body {
 .gallery__title {
   font-size: xx-large;
   padding: 1rem;
+  color: #323232;
 }
 .gallery__img {
   max-width: 100%;
@@ -172,4 +203,4 @@ body {
 }
 .footer__logo--mobile {
   margin: 2.5rem 0 1rem;
-}/*# sourceMappingURL=bio.css.map */
+} /*# sourceMappingURL=bio.css.map */

@@ -32,6 +32,15 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem 2.25rem;
+  }
+}
+
 .nav {
   &__list {
     display: flex;
@@ -48,7 +57,7 @@ body {
 
     &--active {
       border-bottom: 5px solid #fff;
-      padding-bottom: 1.4rem;
+      padding-bottom: 1.15rem;
       width: 50%;
     }
   }
@@ -61,6 +70,16 @@ body {
       @extend .nav__link;
       font-weight: bold;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-left: 2rem;
+  }
+
+  .nav__list {
+    margin-top: 2rem;
   }
 }
 
@@ -107,6 +126,7 @@ body {
   &__quote--title {
     font-size: xx-large;
     padding: 1.5rem 1rem 1rem 1rem;
+    color: $bandsite-black;
   }
 
   &__quote--description {
@@ -114,16 +134,19 @@ body {
     font-size: large;
     padding: 1rem 1rem 2rem 1rem;
     letter-spacing: 0.05rem;
+    color: $bandsite-black;
   }
 
   &__about--title {
-    font-size: medium;
+    font-size: large;
+    font-weight: normal;
     padding: 0 1rem 1rem 1rem;
   }
 
   &__about--description-1 {
     padding: 0 1rem;
     letter-spacing: 0.02rem;
+    color: $bandsite-black;
   }
 
   &__about--description-2 {
@@ -138,6 +161,7 @@ body {
   &__title {
     font-size: xx-large;
     padding: 1rem;
+    color: $bandsite-black;
   }
 
   &__img {
