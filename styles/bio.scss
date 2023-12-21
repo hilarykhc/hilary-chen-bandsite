@@ -85,10 +85,10 @@ body {
 
   &__title {
     font-family: "Avenir";
-    font-size: xxx-large;
+    font-size: xx-large;
     color: #fff;
     position: absolute;
-    margin-left: 2.5rem;
+    padding-left: 1rem;
     padding-top: 11.25rem;
   }
 }
@@ -100,8 +100,49 @@ body {
   }
 
   &__quote--img {
-    width: 40rem;
-    height: 25rem;
-    margin: 2rem;
+    width: 93%;
+    max-width: 35rem;
+  }
+
+  &__quote--title {
+    font-size: xx-large;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  &__quote--description {
+    font-weight: bold;
+    font-size: large;
+    padding: 1rem 1rem 2rem 1rem;
+    letter-spacing: 0.05rem;
+  }
+
+  &__about--title {
+    font-size: medium;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  &__about--description-1 {
+    padding: 0 1rem;
+    letter-spacing: 0.02rem;
+  }
+
+  &__about--description-2 {
+    @extend .musicians__about--description-1;
+    padding-bottom: 1rem;
+  }
+}
+
+.gallery {
+  background-color: $gallery-background;
+
+  &__title {
+    font-size: xx-large;
+    padding: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 30rem;
+    padding: 0 1rem 1rem 1rem;
   }
 }

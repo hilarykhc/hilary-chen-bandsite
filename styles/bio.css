@@ -88,10 +88,10 @@ body {
 }
 .hero__title {
   font-family: "Avenir";
-  font-size: xxx-large;
+  font-size: xx-large;
   color: #fff;
   position: absolute;
-  margin-left: 2.5rem;
+  padding-left: 1rem;
   padding-top: 11.25rem;
 }
 
@@ -100,7 +100,40 @@ body {
   justify-content: center;
 }
 .musicians__quote--img {
-  width: 40rem;
-  height: 25rem;
-  margin: 2rem;
+  width: 93%;
+  max-width: 35rem;
+}
+.musicians__quote--title {
+  font-size: xx-large;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+.musicians__quote--description {
+  font-weight: bold;
+  font-size: large;
+  padding: 1rem 1rem 2rem 1rem;
+  letter-spacing: 0.05rem;
+}
+.musicians__about--title {
+  font-size: medium;
+  padding: 0 1rem 1rem 1rem;
+}
+.musicians__about--description-1, .musicians__about--description-2 {
+  padding: 0 1rem;
+  letter-spacing: 0.02rem;
+}
+.musicians__about--description-2 {
+  padding-bottom: 1rem;
+}
+
+.gallery {
+  background-color: #fafafa;
+}
+.gallery__title {
+  font-size: xx-large;
+  padding: 1rem;
+}
+.gallery__img {
+  width: 100%;
+  max-width: 30rem;
+  padding: 0 1rem 1rem 1rem;
 }/*# sourceMappingURL=bio.css.map */
