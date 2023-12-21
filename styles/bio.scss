@@ -33,11 +33,19 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    height: 4.9rem;
+  }
   .header__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 1rem 2.25rem;
+    padding: 0.25rem 2.25rem;
+  }
+
+  .header__logo {
+    width: auto;
+    padding-right: 1rem;
   }
 }
 
@@ -75,7 +83,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .nav__item {
-    margin-left: 2rem;
+    margin-left: 3.75rem;
+    font-size: 1rem;
   }
 
   .nav__list {
@@ -112,27 +121,41 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 28rem;
+  }
+  .hero__title {
+    padding-left: 2.25rem;
+    font-size: 3.75rem;
+    padding-top: 11rem;
+  }
+}
+
 .musicians {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
   &__img--wrapper {
     display: flex;
     justify-content: center;
   }
 
   &__quote--img {
-    width: 93%;
+    width: 100%;
     max-width: 35rem;
   }
 
   &__quote--title {
     font-size: xx-large;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1.5rem 0 1rem;
     color: $bandsite-black;
   }
 
   &__quote--description {
     font-weight: bold;
     font-size: large;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 0 2rem;
     letter-spacing: 0.05rem;
     color: $bandsite-black;
   }
@@ -140,11 +163,10 @@ body {
   &__about--title {
     font-size: large;
     font-weight: normal;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 0 1rem;
   }
 
   &__about--description-1 {
-    padding: 0 1rem;
     letter-spacing: 0.02rem;
     color: $bandsite-black;
   }
@@ -152,6 +174,24 @@ body {
   &__about--description-2 {
     @extend .musicians__about--description-1;
     padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .musicians {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  .musicians__quote--title {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .musicians__quote--img {
+    width: 100%;
+    max-width: 55rem;
+    height: 25rem;
   }
 }
 
@@ -166,7 +206,29 @@ body {
 
   &__img {
     max-width: 100%;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__wrapper {
+    padding-bottom: 0.5rem;
+  }
+  .gallery__title {
+    padding: 3rem 2.25rem 2rem;
+  }
+
+  .gallery__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .gallery__img {
+    width: 32%;
+    padding: 0 0.75rem 1.5rem;
   }
 }
 
@@ -214,6 +276,16 @@ body {
   }
 
   &__logo--mobile {
-    margin: 2.5rem 0 1rem;
+    margin: 5rem 0 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    padding: 0 2.25rem 2.25rem;
+  }
+
+  .footer__title {
+    padding-top: 3rem;
   }
 }
