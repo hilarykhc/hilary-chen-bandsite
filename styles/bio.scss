@@ -19,7 +19,7 @@ body {
 
 .header {
   background-color: $bandsite-black;
-  height: 10.25rem;
+  height: 7.9rem;
 
   &__brand {
     display: flex;
@@ -27,8 +27,8 @@ body {
   }
 
   &__logo {
-    margin: 2.5rem 0 0.5rem 0;
-    width: 16.25rem;
+    margin: 1.5rem 0 0 0;
+    width: 11.25rem;
   }
 }
 
@@ -68,7 +68,7 @@ body {
   background-image: url(/assets/Images/hero-bio.jpg);
   background-size: cover;
   position: relative;
-  height: 27.5rem;
+  height: 15rem;
   width: 100%;
 
   &::before {
@@ -89,7 +89,7 @@ body {
     color: #fff;
     position: absolute;
     padding-left: 1rem;
-    padding-top: 11.25rem;
+    padding-top: 6rem;
   }
 }
 
@@ -141,8 +141,55 @@ body {
   }
 
   &__img {
-    width: 100%;
-    max-width: 30rem;
+    max-width: 100%;
     padding: 0 1rem 1rem 1rem;
+  }
+}
+
+.footer {
+  background-color: $bandsite-black;
+  color: #ffffff;
+
+  &__wrapper {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: xx-large;
+    padding-bottom: 1.25rem;
+  }
+
+  &__icon {
+    margin: 0 2.5rem 0 0;
+    height: 1.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__name {
+    margin-bottom: 0;
+    margin-top: 1.25rem;
+  }
+
+  &__company {
+    font-weight: 600;
+    padding: 0 0 1rem;
+  }
+
+  &__address {
+    padding: 0 0 1rem;
+  }
+
+  &__email {
+    &--link {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+
+  &__logo--mobile {
+    margin: 2.5rem 0 1rem;
   }
 }

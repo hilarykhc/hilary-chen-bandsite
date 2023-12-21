@@ -32,15 +32,15 @@ body {
 
 .header {
   background-color: #323232;
-  height: 10.25rem;
+  height: 7.9rem;
 }
 .header__brand {
   display: flex;
   justify-content: center;
 }
 .header__logo {
-  margin: 2.5rem 0 0.5rem 0;
-  width: 16.25rem;
+  margin: 1.5rem 0 0 0;
+  width: 11.25rem;
 }
 
 .nav__list {
@@ -72,7 +72,7 @@ body {
   background-image: url(/assets/Images/hero-bio.jpg);
   background-size: cover;
   position: relative;
-  height: 27.5rem;
+  height: 15rem;
   width: 100%;
 }
 .hero::before {
@@ -92,7 +92,7 @@ body {
   color: #fff;
   position: absolute;
   padding-left: 1rem;
-  padding-top: 11.25rem;
+  padding-top: 6rem;
 }
 
 .musicians__img--wrapper {
@@ -133,7 +133,43 @@ body {
   padding: 1rem;
 }
 .gallery__img {
-  width: 100%;
-  max-width: 30rem;
+  max-width: 100%;
   padding: 0 1rem 1rem 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+}
+.footer__wrapper {
+  padding: 1rem;
+}
+.footer__title {
+  font-size: xx-large;
+  padding-bottom: 1.25rem;
+}
+.footer__icon {
+  margin: 0 2.5rem 0 0;
+  height: 1.5rem;
+}
+.footer__link {
+  text-decoration: none;
+}
+.footer__name {
+  margin-bottom: 0;
+  margin-top: 1.25rem;
+}
+.footer__company {
+  font-weight: 600;
+  padding: 0 0 1rem;
+}
+.footer__address {
+  padding: 0 0 1rem;
+}
+.footer__email--link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__logo--mobile {
+  margin: 2.5rem 0 1rem;
 }/*# sourceMappingURL=bio.css.map */
