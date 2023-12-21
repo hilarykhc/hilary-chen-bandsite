@@ -193,6 +193,15 @@ body {
     max-width: 55rem;
     height: 25rem;
   }
+
+  .musicians__about--wrapper {
+    display: flex;
+  }
+
+  .musicians__about--title {
+    font-size: x-large;
+    font-weight: bold;
+  }
 }
 
 .gallery {
