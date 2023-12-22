@@ -140,6 +140,7 @@ body {
 .musicians__quote--img {
   width: 100%;
   max-width: 35rem;
+  /*----------height: 15rem;--------*/
 }
 .musicians__quote--title {
   font-size: xx-large;
@@ -177,7 +178,7 @@ body {
   }
   .musicians__quote--img {
     width: 100%;
-    max-width: 40rem;
+    max-width: 55rem;
     height: 25rem;
   }
   .musicians__quote--description {
