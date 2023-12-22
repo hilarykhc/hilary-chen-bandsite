@@ -300,6 +300,10 @@ body {
   &__logo--mobile {
     margin: 5rem 0 1rem;
   }
+
+  &__logo--wrapper {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -319,5 +323,25 @@ body {
 
   .footer__logo--mobile {
     display: none;
+  }
+
+  .footer__wrapper--tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__logo--wrapper {
+    display: flex;
+    padding-top: 3.25rem;
+  }
+
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__copyright {
+    padding-top: 2rem;
   }
 }
