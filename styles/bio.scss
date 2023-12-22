@@ -190,8 +190,12 @@ body {
 
   .musicians__quote--img {
     width: 100%;
-    max-width: 55rem;
+    max-width: 40rem;
     height: 25rem;
+  }
+
+  .musicians__quote--description {
+    padding: 2rem 3rem;
   }
 
   .musicians__about--wrapper {
@@ -201,6 +205,15 @@ body {
   .musicians__about--title {
     font-size: x-large;
     font-weight: bold;
+    padding: 0 3rem 1rem;
+  }
+
+  .musicians__about--description-1 {
+    padding: 0 1.5rem 2rem 3rem;
+  }
+
+  .musicians__about--description-2 {
+    padding: 0 3rem 2rem 1.5rem;
   }
 }
 
@@ -295,6 +308,16 @@ body {
   }
 
   .footer__title {
+    padding: 0 2.5rem 0 0;
+  }
+
+  .footer__medias {
+    display: flex;
+    align-items: center;
     padding-top: 3rem;
+  }
+
+  .footer__logo--mobile {
+    display: none;
   }
 }
