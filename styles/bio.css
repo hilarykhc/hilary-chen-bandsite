@@ -276,7 +276,8 @@ body {
     padding: 0 2.25rem 2.25rem;
   }
   .footer__title {
-    padding: 0 2.5rem 0 0;
+    padding: 0 2.5rem 1rem 0;
+    font-size: 2.25rem;
   }
   .footer__medias {
     display: flex;
@@ -298,8 +299,13 @@ body {
   .footer__contacts {
     display: flex;
     justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  .footer__detail {
+    line-height: 1.4rem;
   }
   .footer__copyright {
-    padding-top: 2rem;
+    padding-top: 3rem;
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=bio.css.map */
