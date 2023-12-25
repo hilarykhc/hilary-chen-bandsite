@@ -45,8 +45,13 @@ body {
 
   .header__logo {
     width: auto;
-    padding-right: 1rem;
     margin-top: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header__wrapper {
+    padding: 0.25rem 6.75rem;
   }
 }
 
@@ -133,6 +138,17 @@ body {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 39rem;
+  }
+
+  .hero__title {
+    padding-left: 6.75rem;
+    padding-top: 17rem;
+  }
+}
+
 .musicians {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -188,7 +204,7 @@ body {
 
   .musicians__quote--title {
     padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.25rem;
   }
 
   .musicians__quote--img {
@@ -199,7 +215,7 @@ body {
   }
 
   .musicians__quote--description {
-    padding: 2rem 3rem 1rem;
+    padding: 2.5rem 3rem 1rem;
     font-size: 1.35rem;
     letter-spacing: 0.06rem;
     line-height: 1.75rem;
@@ -223,13 +239,47 @@ body {
   }
 
   .musicians__about--description-1 {
-    padding: 0 1rem 2rem 3rem;
+    padding: 0 1rem 2.25rem 3rem;
     letter-spacing: -0.02rem;
   }
 
   .musicians__about--description-2 {
-    padding: 0 3rem 2rem 1rem;
+    padding: 0 3rem 2.25rem 1rem;
     letter-spacing: -0.02rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .musicians {
+    padding-left: 6.75rem;
+    padding-right: 6.75rem;
+  }
+
+  .musicians__quote--img {
+    max-width: 56rem;
+    height: 27rem;
+  }
+
+  .musicians__quote--description {
+    padding: 2.5rem 17.25rem 1rem 5.25rem;
+  }
+
+  .musicians__quote--vocalist {
+    padding: 0 5.25rem 3rem;
+  }
+
+  .musicians__about--title {
+    padding: 0 5.25rem 1rem;
+  }
+
+  .musicians__about--description-1 {
+    padding: 0 1rem 2.25rem 5.25rem;
+    letter-spacing: 0.004rem;
+  }
+
+  .musicians__about--description-2 {
+    padding: 0 5.25rem 2.25rem 1rem;
+    letter-spacing: 0.004rem;
   }
 }
 
@@ -250,10 +300,10 @@ body {
 
 @media screen and (min-width: 768px) {
   .gallery__wrapper {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
   }
   .gallery__title {
-    padding: 3rem 2.25rem 2rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
 
   .gallery__images {
@@ -267,6 +317,12 @@ body {
   .gallery__img {
     width: 32%;
     padding: 0 0.75rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery__wrapper {
+    margin: 0 4.5rem;
   }
 }
 
@@ -366,5 +422,19 @@ body {
   .footer__copyright {
     padding-top: 3rem;
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 128px) {
+  .footer__wrapper {
+    padding: 0 6.75rem 2.25rem;
+  }
+
+  .footer__contacts {
+    justify-content: start;
+  }
+
+  .footer__detail {
+    padding-right: 3rem;
   }
 }
