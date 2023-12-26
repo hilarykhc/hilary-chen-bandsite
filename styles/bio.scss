@@ -211,6 +211,7 @@ body {
   .musicians__quote--title {
     padding-top: 3rem;
     padding-bottom: 2.25rem;
+    font-size: 2.25rem;
   }
 
   .musicians__quote--img {
@@ -311,6 +312,7 @@ body {
   }
   .gallery__title {
     padding: 3rem 2.25rem 2.25rem;
+    font-size: 2.25rem;
   }
 
   .gallery__images {
@@ -319,6 +321,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0 0.5rem;
   }
 
   .gallery__img {
@@ -330,6 +333,10 @@ body {
 @media screen and (min-width: 1280px) {
   .gallery__wrapper {
     margin: 0 4.5rem;
+  }
+
+  .gallery__images {
+    margin: 0;
   }
 }
 
