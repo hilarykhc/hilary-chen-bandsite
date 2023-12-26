@@ -71,8 +71,7 @@ body {
 
     &--active {
       border-bottom: 5px solid #fff;
-      padding-bottom: 1.25rem;
-      width: 50%;
+      padding-bottom: 1.2rem;
     }
   }
 
@@ -174,9 +173,15 @@ body {
   &__quote--description {
     font-weight: bold;
     font-size: large;
-    padding: 1rem 0 2rem;
+    padding: 1rem 0 0.5rem;
     letter-spacing: 0.05rem;
+    line-height: 1.5rem;
     color: $bandsite-black;
+  }
+
+  &__quote--vocalist {
+    @extend .musicians__quote--description;
+    padding: 0 0 2rem;
   }
 
   &__about--title {
@@ -186,7 +191,8 @@ body {
   }
 
   &__about--description-1 {
-    letter-spacing: 0.02rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.5rem;
     color: $bandsite-black;
   }
 
@@ -224,6 +230,7 @@ body {
   .musicians__quote--vocalist {
     font-weight: bold;
     padding: 0 3rem 3rem;
+    font-size: medium;
   }
 
   .musicians__about--wrapper {
@@ -425,7 +432,7 @@ body {
   }
 }
 
-@media screen and (min-width: 128px) {
+@media screen and (min-width: 1280px) {
   .footer__wrapper {
     padding: 0 6.75rem 2.25rem;
   }
