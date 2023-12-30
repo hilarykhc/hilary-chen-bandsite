@@ -152,7 +152,7 @@ body {
 .musicians__quote--img {
   width: 100%;
   max-width: 46rem;
-  max-height: 20rem;
+  max-height: 13.75rem;
 }
 .musicians__quote--title {
   font-size: xx-large;
@@ -316,7 +316,7 @@ body {
 }
 .footer__title {
   font-size: xx-large;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 .footer__icon {
   margin: 0 2.5rem 0 0;
@@ -327,14 +327,14 @@ body {
 }
 .footer__name {
   margin-bottom: 0;
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 }
 .footer__company {
   font-weight: 600;
-  padding: 0 0 1.5rem;
+  padding: 0 0 1rem;
 }
 .footer__address {
-  padding: 0 0 1.5rem;
+  padding: 0 0 1rem;
 }
 .footer__email--link {
   color: #ffffff;
@@ -352,7 +352,7 @@ body {
     padding: 0 2.25rem 2.25rem;
   }
   .footer__title {
-    padding: 0 2.5rem 1rem 0;
+    padding: 0 2.5rem 0.25rem 0;
     font-size: 2.25rem;
   }
   .footer__medias {

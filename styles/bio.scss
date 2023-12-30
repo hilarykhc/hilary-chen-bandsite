@@ -159,7 +159,7 @@ body {
   &__quote--img {
     width: 100%;
     max-width: 46rem;
-    max-height: 20rem;
+    max-height: 13.75rem;
   }
 
   &__quote--title {
@@ -357,7 +357,7 @@ body {
 
   &__title {
     font-size: xx-large;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 
   &__icon {
@@ -371,16 +371,16 @@ body {
 
   &__name {
     margin-bottom: 0;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
   }
 
   &__company {
     font-weight: 600;
-    padding: 0 0 1.5rem;
+    padding: 0 0 1rem;
   }
 
   &__address {
-    padding: 0 0 1.5rem;
+    padding: 0 0 1rem;
   }
 
   &__email {
@@ -405,7 +405,7 @@ body {
   }
 
   .footer__title {
-    padding: 0 2.5rem 1rem 0;
+    padding: 0 2.5rem 0.25rem 0;
     font-size: 2.25rem;
   }
 
