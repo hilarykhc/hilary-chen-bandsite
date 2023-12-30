@@ -19,7 +19,7 @@ body {
 
 .header {
   background-color: $bandsite-black;
-  height: 7.9rem;
+  height: 7.2rem;
 
   &__brand {
     display: flex;
@@ -28,13 +28,13 @@ body {
 
   &__logo {
     margin: 1.5rem 0 0 0;
-    width: 11.25rem;
+    width: 10.25rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .header {
-    height: 5rem;
+    height: 4.98rem;
   }
   .header__wrapper {
     display: flex;
@@ -64,7 +64,6 @@ body {
   }
 
   &__item {
-    font-size: x-large;
     font-family: "Avenir";
     list-style: none;
     width: 50%;
@@ -159,9 +158,8 @@ body {
 
   &__quote--img {
     width: 100%;
-    max-width: 35rem;
-
-    /*----------height: 15rem;--------*/
+    max-width: 46rem;
+    max-height: 20rem;
   }
 
   &__quote--title {
@@ -216,9 +214,10 @@ body {
 
   .musicians__quote--img {
     width: 100%;
-    max-width: 55rem;
-    height: 20rem;
+    max-width: 69rem;
+    height: 23rem;
     margin: 0 3rem;
+    max-height: none;
   }
 
   .musicians__quote--description {
@@ -264,8 +263,10 @@ body {
   }
 
   .musicians__quote--img {
-    max-width: 56rem;
-    height: 27rem;
+    max-width: 96rem;
+    height: 32.75rem;
+    margin: 0 5rem;
+    max-height: none;
   }
 
   .musicians__quote--description {
@@ -303,6 +304,12 @@ body {
   &__img {
     max-width: 100%;
     padding: 0 1rem 1rem;
+    display: block;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
 }
 
