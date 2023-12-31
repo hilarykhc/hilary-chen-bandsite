@@ -297,7 +297,7 @@ body {
 
   &__title {
     font-size: xx-large;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem;
     color: $bandsite-black;
   }
 
@@ -357,7 +357,7 @@ body {
 
   &__title {
     font-size: xx-large;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
   }
 
   &__icon {
@@ -369,9 +369,13 @@ body {
     text-decoration: none;
   }
 
+  &__contacts {
+    line-height: 1.5rem;
+  }
+
   &__name {
     margin-bottom: 0;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   &__company {
@@ -405,7 +409,7 @@ body {
   }
 
   .footer__title {
-    padding: 0 2.5rem 0.25rem 0;
+    padding: 0 2.5rem 0.75rem 0;
     font-size: 2.25rem;
   }
 

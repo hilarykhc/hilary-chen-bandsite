@@ -265,7 +265,7 @@ body {
 }
 .gallery__title {
   font-size: xx-large;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem;
   color: #323232;
 }
 .gallery__img {
@@ -316,7 +316,7 @@ body {
 }
 .footer__title {
   font-size: xx-large;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
 }
 .footer__icon {
   margin: 0 2.5rem 0 0;
@@ -325,9 +325,12 @@ body {
 .footer__link {
   text-decoration: none;
 }
+.footer__contacts {
+  line-height: 1.5rem;
+}
 .footer__name {
   margin-bottom: 0;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .footer__company {
   font-weight: 600;
@@ -352,7 +355,7 @@ body {
     padding: 0 2.25rem 2.25rem;
   }
   .footer__title {
-    padding: 0 2.5rem 0.25rem 0;
+    padding: 0 2.5rem 0.75rem 0;
     font-size: 2.25rem;
   }
   .footer__medias {
