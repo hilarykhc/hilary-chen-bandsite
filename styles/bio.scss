@@ -35,17 +35,18 @@ body {
 @media screen and (min-width: 768px) {
   .header {
     height: 4.98rem;
-  }
-  .header__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0.25rem 2.25rem;
-  }
 
-  .header__logo {
-    width: auto;
-    margin-top: 1.75rem;
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 0.25rem 2.25rem;
+    }
+
+    &__logo {
+      width: auto;
+      margin-top: 1.75rem;
+    }
   }
 }
 
@@ -86,13 +87,15 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .nav__item {
-    margin-left: 3.75rem;
-    font-size: 1rem;
-  }
+  .nav {
+    &__item {
+      margin-left: 3.75rem;
+      font-size: 1rem;
+    }
 
-  .nav__list {
-    margin-top: 2rem;
+    &__list {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -128,22 +131,23 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     height: 28rem;
-  }
-  .hero__title {
-    padding-left: 2.25rem;
-    font-size: 3.75rem;
-    padding-top: 11rem;
+
+    &__title {
+      padding-left: 2.25rem;
+      font-size: 3.75rem;
+      padding-top: 11rem;
+    }
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero {
     height: 39rem;
-  }
 
-  .hero__title {
-    padding-left: 6.75rem;
-    padding-top: 17rem;
+    &__title {
+      padding-left: 6.75rem;
+      padding-top: 17rem;
+    }
   }
 }
 
@@ -156,47 +160,51 @@ body {
     justify-content: center;
   }
 
-  &__quote--img {
-    width: 100%;
-    max-width: 46rem;
-    max-height: 13.75rem;
+  &__quote {
+    &--img {
+      width: 100%;
+      max-width: 46rem;
+      max-height: 13.75rem;
+    }
+
+    &--title {
+      font-size: xx-large;
+      padding: 1.5rem 0 1rem;
+      color: $bandsite-black;
+    }
+
+    &--description {
+      font-weight: bold;
+      font-size: large;
+      padding: 1rem 0 0.5rem;
+      letter-spacing: 0.05rem;
+      line-height: 1.5rem;
+      color: $bandsite-black;
+    }
+
+    &--vocalist {
+      @extend .musicians__quote--description;
+      padding: 0 0 2rem;
+    }
   }
 
-  &__quote--title {
-    font-size: xx-large;
-    padding: 1.5rem 0 1rem;
-    color: $bandsite-black;
-  }
+  &__about {
+    &--title {
+      font-size: large;
+      font-weight: normal;
+      padding: 0 0 1rem;
+    }
 
-  &__quote--description {
-    font-weight: bold;
-    font-size: large;
-    padding: 1rem 0 0.5rem;
-    letter-spacing: 0.05rem;
-    line-height: 1.5rem;
-    color: $bandsite-black;
-  }
+    &--description-1 {
+      letter-spacing: 0.01rem;
+      line-height: 1.5rem;
+      color: $bandsite-black;
+    }
 
-  &__quote--vocalist {
-    @extend .musicians__quote--description;
-    padding: 0 0 2rem;
-  }
-
-  &__about--title {
-    font-size: large;
-    font-weight: normal;
-    padding: 0 0 1rem;
-  }
-
-  &__about--description-1 {
-    letter-spacing: 0.01rem;
-    line-height: 1.5rem;
-    color: $bandsite-black;
-  }
-
-  &__about--description-2 {
-    @extend .musicians__about--description-1;
-    padding-bottom: 1rem;
+    &--description-2 {
+      @extend .musicians__about--description-1;
+      padding-bottom: 1rem;
+    }
   }
 }
 
@@ -204,55 +212,59 @@ body {
   .musicians {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-  }
 
-  .musicians__quote--title {
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    font-size: 2.25rem;
-  }
+    &__quote {
+      &--title {
+        padding-top: 3rem;
+        padding-bottom: 2.25rem;
+        font-size: 2.25rem;
+      }
 
-  .musicians__quote--img {
-    width: 100%;
-    max-width: 69rem;
-    height: 23rem;
-    margin: 0 3rem;
-    max-height: none;
-  }
+      &--img {
+        width: 100%;
+        max-width: 69rem;
+        height: 23rem;
+        margin: 0 3rem;
+        max-height: none;
+      }
 
-  .musicians__quote--description {
-    padding: 2.5rem 3rem 1rem;
-    font-size: 1.35rem;
-    letter-spacing: 0.06rem;
-    line-height: 1.75rem;
-  }
+      &--description {
+        padding: 2.5rem 3rem 1rem;
+        font-size: 1.35rem;
+        letter-spacing: 0.06rem;
+        line-height: 1.75rem;
+      }
 
-  .musicians__quote--vocalist {
-    font-weight: bold;
-    padding: 0 3rem 3rem;
-    font-size: medium;
-  }
+      &--vocalist {
+        font-weight: bold;
+        padding: 0 3rem 3rem;
+        font-size: medium;
+      }
+    }
 
-  .musicians__about--wrapper {
-    display: flex;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-  }
+    &__about {
+      &--wrapper {
+        display: flex;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
 
-  .musicians__about--title {
-    font-size: x-large;
-    font-weight: bold;
-    padding: 0 3rem 1rem;
-  }
+      &--title {
+        font-size: x-large;
+        font-weight: bold;
+        padding: 0 3rem 1rem;
+      }
 
-  .musicians__about--description-1 {
-    padding: 0 1rem 2.25rem 3rem;
-    letter-spacing: -0.02rem;
-  }
+      &--description-1 {
+        padding: 0 1rem 2.25rem 3rem;
+        letter-spacing: -0.02rem;
+      }
 
-  .musicians__about--description-2 {
-    padding: 0 3rem 2.25rem 1rem;
-    letter-spacing: -0.02rem;
+      &--description-2 {
+        padding: 0 3rem 2.25rem 1rem;
+        letter-spacing: -0.02rem;
+      }
+    }
   }
 }
 
@@ -260,35 +272,39 @@ body {
   .musicians {
     padding-left: 6.75rem;
     padding-right: 6.75rem;
-  }
 
-  .musicians__quote--img {
-    max-width: 96rem;
-    height: 32.75rem;
-    margin: 0 5rem;
-    max-height: none;
-  }
+    &__quote {
+      &--img {
+        max-width: 96rem;
+        height: 32.75rem;
+        margin: 0 5rem;
+        max-height: none;
+      }
 
-  .musicians__quote--description {
-    padding: 2.5rem 17.25rem 1rem 5.25rem;
-  }
+      &--description {
+        padding: 2.5rem 17.25rem 1rem 5.25rem;
+      }
 
-  .musicians__quote--vocalist {
-    padding: 0 5.25rem 3rem;
-  }
+      &--vocalist {
+        padding: 0 5.25rem 3rem;
+      }
+    }
 
-  .musicians__about--title {
-    padding: 0 5.25rem 1rem;
-  }
+    &__about {
+      &--title {
+        padding: 0 5.25rem 1rem;
+      }
 
-  .musicians__about--description-1 {
-    padding: 0 1rem 2.25rem 5.25rem;
-    letter-spacing: 0.004rem;
-  }
+      &--description-1 {
+        padding: 0 1rem 2.25rem 5.25rem;
+        letter-spacing: 0.004rem;
+      }
 
-  .musicians__about--description-2 {
-    padding: 0 5.25rem 2.25rem 1rem;
-    letter-spacing: 0.004rem;
+      &--description-2 {
+        padding: 0 5.25rem 2.25rem 1rem;
+        letter-spacing: 0.004rem;
+      }
+    }
   }
 }
 
@@ -314,36 +330,41 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .gallery__wrapper {
-    padding-bottom: 0.75rem;
-  }
-  .gallery__title {
-    padding: 3rem 2.25rem 2.25rem;
-    font-size: 2.25rem;
-  }
+  .gallery {
+    &__wrapper {
+      padding-bottom: 0.75rem;
+    }
 
-  .gallery__images {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 0.5rem;
-  }
+    &__title {
+      padding: 3rem 2.25rem 2.25rem;
+      font-size: 2.25rem;
+    }
 
-  .gallery__img {
-    width: 32%;
-    padding: 0 0.75rem 1.5rem;
+    &__images {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 0.5rem;
+    }
+
+    &__img {
+      width: 32%;
+      padding: 0 0.75rem 1.5rem;
+    }
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .gallery__wrapper {
-    margin: 0 4.5rem;
-  }
+  .gallery {
+    &__wrapper {
+      margin: 0 4.5rem;
+    }
 
-  .gallery__images {
-    margin: 0;
+    &__images {
+      margin: 0;
+    }
   }
 }
 
@@ -394,72 +415,80 @@ body {
     }
   }
 
-  &__logo--mobile {
-    margin: 5rem 0 1rem;
-  }
+  &__logo {
+    &--mobile {
+      margin: 5rem 0 1rem;
+    }
 
-  &__logo--wrapper {
-    display: none;
+    &--wrapper {
+      display: none;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer__wrapper {
-    padding: 0 2.25rem 2.25rem;
-  }
+  .footer {
+    &__wrapper {
+      padding: 0 2.25rem 2.25rem;
+    }
 
-  .footer__title {
-    padding: 0 2.5rem 0.75rem 0;
-    font-size: 2.25rem;
-  }
+    &__title {
+      padding: 0 2.5rem 0.75rem 0;
+      font-size: 2.25rem;
+    }
 
-  .footer__medias {
-    display: flex;
-    align-items: center;
-    padding-top: 3rem;
-  }
+    &__medias {
+      display: flex;
+      align-items: center;
+      padding-top: 3rem;
+    }
 
-  .footer__logo--mobile {
-    display: none;
-  }
+    &__logo {
+      &--mobile {
+        display: none;
+      }
 
-  .footer__wrapper--tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+      &--wrapper {
+        display: flex;
+        padding-top: 3.25rem;
+      }
+    }
 
-  .footer__logo--wrapper {
-    display: flex;
-    padding-top: 3.25rem;
-  }
+    &__wrapper--tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .footer__contacts {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-  }
+    &__contacts {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
 
-  .footer__detail {
-    line-height: 1.4rem;
-  }
+    &__detail {
+      line-height: 1.4rem;
+    }
 
-  .footer__copyright {
-    padding-top: 3rem;
-    font-size: 0.9rem;
+    &__copyright {
+      padding-top: 3rem;
+      font-size: 0.9rem;
+    }
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .footer__wrapper {
-    padding: 0 6.75rem 2.25rem;
-  }
+  .footer {
+    &__wrapper {
+      padding: 0 6.75rem 2.25rem;
+    }
 
-  .footer__contacts {
-    justify-content: start;
-  }
+    &__contacts {
+      justify-content: start;
+    }
 
-  .footer__detail {
-    padding-right: 3rem;
+    &__detail {
+      padding-right: 3rem;
+    }
   }
 }
