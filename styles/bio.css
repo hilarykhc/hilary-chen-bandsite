@@ -79,7 +79,7 @@ body {
 }
 .nav__item--active {
   border-bottom: 5px solid #fff;
-  padding-bottom: 1.2rem;
+  padding-bottom: 0.95rem;
 }
 .nav__link, .nav__link--active {
   color: #fff;
@@ -93,6 +93,9 @@ body {
   .nav__item {
     margin-left: 3.75rem;
     font-size: 1rem;
+  }
+  .nav__item--active {
+    padding-bottom: 1.05rem;
   }
   .nav__list {
     margin-top: 2rem;
@@ -246,7 +249,7 @@ body {
     max-height: none;
   }
   .musicians__quote--description, .musicians__quote--vocalist {
-    padding: 2.5rem 17.25rem 1rem 5.25rem;
+    padding: 2.5rem 16rem 1rem 5.25rem;
   }
   .musicians__quote--vocalist {
     padding: 0 5.25rem 3rem;
@@ -348,6 +351,7 @@ body {
 }
 .footer__logo--mobile {
   margin: 5rem 0 1rem;
+  width: 10.25rem;
 }
 .footer__logo--wrapper {
   display: none;
