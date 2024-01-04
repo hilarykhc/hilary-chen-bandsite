@@ -37,15 +37,6 @@ body {
   background-color: #323232;
   height: 7.2rem;
 }
-.header__brand {
-  display: flex;
-  justify-content: center;
-}
-.header__logo {
-  margin: 1.5rem 0 0 0;
-  width: 10.25rem;
-}
-
 @media screen and (min-width: 768px) {
   .header {
     height: 4.98rem;
@@ -56,16 +47,59 @@ body {
     justify-content: flex-start;
     padding: 0.25rem 2.25rem;
   }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .header__wrapper {
+    padding: 0.25rem 6.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .header__logo {
     width: auto;
     margin-top: 1.75rem;
   }
 }
+.header__brand {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  margin: 1.5rem 0 0 0;
+  width: 10.25rem;
+}
+
+/*
+@include desktop {
+  .header__wrapper {
+    padding: 0.25rem 6.75rem;
+  }
+}
+
+/*
+@media screen and (min-width: 768px) {
+  .header {
+    height: 4.98rem;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 0.25rem 2.25rem;
+    }
+
+    &__logo {
+      width: auto;
+      margin-top: 1.75rem;
+    }
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .header__wrapper {
     padding: 0.25rem 6.75rem;
   }
 }
+*/
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -313,6 +347,57 @@ body {
     margin: 0;
   }
 }
+.comments__wrapper {
+  margin: 1.5rem 1rem 1rem;
+}
+.comments__list {
+  list-style-type: none;
+  padding: 0 0 0 1rem;
+}
+.comments__img {
+  background-image: url(/assets/Images/Mohan-muruge.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-top: 3rem;
+}
+.comments__add {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.comments__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.comments__name, .comments__textarea {
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #dedede;
+  background-color: #fcfcfc;
+  margin: 0.3rem 0 0.9rem 0;
+  padding: 1rem;
+}
+.comments__label {
+  text-transform: uppercase;
+  color: #a1a1a1;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.comments__button {
+  width: 100%;
+  background-color: #323232;
+  color: #ffffff;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0.5rem 2rem;
+}
+
 .footer {
   background-color: #323232;
   color: #ffffff;
