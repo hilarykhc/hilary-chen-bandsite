@@ -24,7 +24,9 @@ const comments = [
 ];
 
 //parents container
-const commentsContainer = document.querySelector(".comments__wrapper");
+const commentsContainer = document.querySelector(
+  ".display-comments__container"
+);
 
 for (let i = 0; i < comments.length; i++) {
   let commentsObj = comments[i];
@@ -88,7 +90,49 @@ function createCommentsCard(commentsData) {
   divEl.appendChild(textEl);
 }
 
-const cardEl = document.createElement("div");
-cardEl.classList.add("display-comments__card");
-cardEl.setAttribute("id", "comments-list-1");
-listEl.appendChild(cardEl);
+// ///// //
+
+document.addEventListener("DOMContentLoaded", function () {
+  const commentsContainer = document.querySelector(
+    ".display-comments__container"
+  );
+  const form = document.getElementById("form");
+
+  // Event listener for form
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get form values
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+    const currentDate = new Date().toLocaleDateString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+    });
+
+    // Create new comment object
+    const newComment = {
+      name: name,
+      date: currentDate,
+      text: comment,
+      headshot: "grey circular object", // Add a default headshot or update it based on user input
+    };
+
+    // Add new comment to comments array
+    comments.unshift(newComment);
+
+    // Clear form fields
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    // Clear existing comments in the display
+    commentsContainer.innerHTML = "";
+
+    // Render all comments, including the new one
+    for (let i = 0; i < comments.length; i++) {
+      let commentsObj = comments[i];
+      createCommentsCard(commentsObj);
+    }
+  });
+});

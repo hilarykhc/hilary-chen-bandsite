@@ -79,6 +79,10 @@ body {
       @extend .nav__link;
       font-weight: bold;
     }
+
+    &--inactive {
+      color: #e1e1e1;
+    }
   }
 }
 
@@ -103,7 +107,7 @@ body {
   background-image: url(/assets/Images/hero-shows.jpg);
   background-size: cover;
   position: relative;
-  height: 15rem;
+  height: 25rem;
   width: 100%;
 
   &::before {
@@ -124,7 +128,20 @@ body {
     color: #fff;
     position: absolute;
     padding-left: 1rem;
-    padding-top: 6rem;
+    padding-top: 5rem;
+  }
+
+  &__album {
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+    padding: 2.75rem 1rem 1rem;
+  }
+
+  &__iframe {
+    margin: 12rem 1rem 0;
+    width: 18rem;
+    position: absolute;
   }
 }
 
@@ -147,6 +164,59 @@ body {
     &__title {
       padding-left: 6.75rem;
       padding-top: 17rem;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.shows {
+  &__list {
+    list-style-type: none;
+    padding: 0 1rem;
+    margin: 0 0 1rem;
+  }
+
+  &__title-name {
+    font-size: xx-large;
+    padding: 1.5rem 1rem 0;
+  }
+
+  &__subhead--tabletAndDesktop {
+    display: none;
+
+    @include tablet-and-desktop {
+      display: contents;
+    }
+  }
+
+  &__label {
+    color: #a1a1a1;
+    text-transform: uppercase;
+    padding: 1rem 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  &__button {
+    color: #ffffff;
+    background-color: $bandsite-black;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    border: none;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0 0;
+  }
+
+  &__cards {
+    border-bottom: 0.063rem solid #e1e1e1;
+    padding: 0 0 1rem 0;
+
+    &--sublist {
+      padding: 0;
     }
   }
 }
