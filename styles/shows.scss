@@ -1,0 +1,100 @@
+@use "./partials/resets";
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+body {
+  font-family: "Avenir";
+  margin: 0;
+}
+
+.header {
+  background-color: $bandsite-black;
+  height: 7.2rem;
+
+  @include tablet-and-desktop {
+    height: 4.98rem;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 0.25rem 2.25rem;
+
+      @include desktop {
+        padding: 0.25rem 6.75rem;
+      }
+    }
+
+    &__logo {
+      width: auto;
+      margin-top: 1.75rem;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    margin: 1.5rem 0 0 0;
+    width: 10.25rem;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  &__item {
+    font-family: "Avenir";
+    list-style: none;
+    width: 50%;
+
+    &--active {
+      border-bottom: 5px solid #fff;
+      padding-bottom: 0.95rem;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+
+    &--active {
+      @extend .nav__link;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    &__item {
+      margin-left: 3.75rem;
+      font-size: 1rem;
+
+      &--active {
+        padding-bottom: 1.05rem;
+      }
+    }
+
+    &__list {
+      margin-top: 2rem;
+    }
+  }
+}

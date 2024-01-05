@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf");
+  src: url("/assets/Font/Alternative files/AvenirNextLTPro-Bold");
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf");
+  src: url("/assets/Font/Alternative files/AvenirNextLTPro-Demi");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf");
+  src: url("/assets/Font/Alternative files/AvenirNextLTPro-Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+body {
+  font-family: "Avenir";
+  margin: 0;
+}
+
+.header {
+  background-color: #323232;
+  height: 7.2rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 4.98rem;
+  }
+  .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.25rem 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .header__wrapper {
+    padding: 0.25rem 6.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: auto;
+    margin-top: 1.75rem;
+  }
+}
+.header__brand {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  margin: 1.5rem 0 0 0;
+  width: 10.25rem;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 0;
+}
+.nav__item {
+  font-family: "Avenir";
+  list-style: none;
+  width: 50%;
+}
+.nav__item--active {
+  border-bottom: 5px solid #fff;
+  padding-bottom: 0.95rem;
+}
+.nav__link, .nav__link--active {
+  color: #fff;
+  text-decoration: none;
+}
+.nav__link--active {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-left: 3.75rem;
+    font-size: 1rem;
+  }
+  .nav__item--active {
+    padding-bottom: 1.05rem;
+  }
+  .nav__list {
+    margin-top: 2rem;
+  }
+}/*# sourceMappingURL=shows.css.map */
