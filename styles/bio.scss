@@ -13,7 +13,7 @@ h1,
 h2,
 p,
 body {
-  font-family: "Avenir";
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -99,13 +99,13 @@ body {
     width: 50%;
 
     &--active {
-      border-bottom: 5px solid #fff;
+      border-bottom: 5px solid $pure-white;
       padding-bottom: 0.95rem;
     }
   }
 
   &__link {
-    color: #fff;
+    color: $pure-white;
     text-decoration: none;
 
     &--active {
@@ -114,7 +114,7 @@ body {
     }
 
     &--inactive {
-      color: #e1e1e1;
+      color: $secondary-grey;
     }
   }
 }
@@ -156,9 +156,9 @@ body {
   }
 
   &__title {
-    font-family: "Avenir";
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
     font-size: xx-large;
-    color: #fff;
+    color: $pure-white;
     position: absolute;
     padding-left: 1rem;
     padding-top: 6rem;
@@ -448,7 +448,7 @@ body {
     &--none {
       object-fit: cover;
       border-radius: 50%;
-      background-color: #dedede;
+      background-color: $profile-color;
       min-width: 2.8rem;
       height: 2.5rem;
     }
@@ -458,7 +458,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    border-bottom: 0.063rem solid #e1e1e1;
+    border-bottom: 0.063rem solid $secondary-grey;
     padding: 0 0 1rem 0;
   }
 
@@ -472,18 +472,18 @@ body {
   &__name {
     width: 100%;
     border-radius: 0.25rem;
-    border: 0.063rem solid #e1e1e1;
-    background-color: #fcfcfc;
+    border: 0.063rem solid $secondary-grey;
+    background-color: $textinput-color;
     margin: 0.3rem 0 0.9rem 0;
     padding: 0.75rem;
 
     &:focus {
-      outline: 0.063rem solid #323232;
+      outline: 0.063rem solid $bandsite-black;
     }
 
     &::placeholder {
       color: #000000;
-      font-family: avenir;
+      font-family: "Avenir";
     }
   }
 
@@ -494,19 +494,24 @@ body {
 
   &__label {
     text-transform: uppercase;
-    color: #a1a1a1;
+    color: $label-color;
     font-size: 0.9rem;
     font-weight: 600;
   }
 
   &__button {
     width: 100%;
-    background-color: #323232;
-    color: #ffffff;
+    background-color: $bandsite-black;
+    color: $pure-white;
     text-transform: uppercase;
     border-radius: 0.25rem;
     border: none;
     padding: 0.5rem 2rem;
+
+    &:hover {
+      background-color: $pure-black;
+      cursor: pointer;
+    }
 
     @include tablet-and-desktop {
       width: initial;
@@ -522,7 +527,7 @@ body {
 
 .display-comments {
   &__card {
-    border-bottom: 0.063rem solid #e1e1e1;
+    border-bottom: 0.063rem solid $secondary-grey;
     display: flex;
     padding: 0 0 1rem 0;
   }
@@ -551,13 +556,13 @@ body {
   }
 
   &__date {
-    color: #a1a1a1;
+    color: $label-color;
   }
 }
 
 .footer {
   background-color: $bandsite-black;
-  color: #ffffff;
+  color: $pure-white;
 
   &__wrapper {
     padding: 1.5rem 1rem 1rem;
@@ -597,7 +602,7 @@ body {
 
   &__email {
     &--link {
-      color: #ffffff;
+      color: $pure-white;
       text-decoration: none;
     }
   }

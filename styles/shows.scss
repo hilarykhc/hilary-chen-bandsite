@@ -66,13 +66,13 @@ body {
     width: 50%;
 
     &--active {
-      border-bottom: 5px solid #fff;
+      border-bottom: 5px solid $pure-white;
       padding-bottom: 0.95rem;
     }
   }
 
   &__link {
-    color: #fff;
+    color: $pure-white;
     text-decoration: none;
 
     &--active {
@@ -81,7 +81,7 @@ body {
     }
 
     &--inactive {
-      color: #e1e1e1;
+      color: $secondary-grey;
     }
   }
 }
@@ -125,7 +125,7 @@ body {
   &__title {
     font-family: "Avenir";
     font-size: xx-large;
-    color: #fff;
+    color: $pure-white;
     position: absolute;
     padding-left: 1rem;
     padding-top: 5rem;
@@ -133,7 +133,7 @@ body {
 
   &__album {
     font-weight: 600;
-    color: #ffffff;
+    color: $pure-white;
     position: absolute;
     padding: 2.75rem 1rem 1rem;
   }
@@ -193,7 +193,7 @@ ul {
   }
 
   &__label {
-    color: #a1a1a1;
+    color: $label-color;
     text-transform: uppercase;
     padding: 1rem 0 0;
     font-size: 0.9rem;
@@ -201,7 +201,7 @@ ul {
   }
 
   &__button {
-    color: #ffffff;
+    color: $pure-white;
     background-color: $bandsite-black;
     text-transform: uppercase;
     border-radius: 0.25rem;
@@ -212,7 +212,7 @@ ul {
   }
 
   &__cards {
-    border-bottom: 0.063rem solid #e1e1e1;
+    border-bottom: 0.063rem solid $secondary-grey;
     padding: 0 0 1rem 0;
 
     &--sublist {
@@ -223,7 +223,7 @@ ul {
 
 .footer {
   background-color: $bandsite-black;
-  color: #ffffff;
+  color: $pure-white;
 
   &__wrapper {
     padding: 1.5rem 1rem 1rem;
@@ -263,7 +263,7 @@ ul {
 
   &__email {
     &--link {
-      color: #ffffff;
+      color: $pure-white;
       text-decoration: none;
     }
   }

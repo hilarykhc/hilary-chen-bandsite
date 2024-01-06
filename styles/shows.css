@@ -80,11 +80,11 @@ body {
   width: 50%;
 }
 .nav__item--active {
-  border-bottom: 5px solid #fff;
+  border-bottom: 5px solid #ffffff;
   padding-bottom: 0.95rem;
 }
 .nav__link, .nav__link--active {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 .nav__link--active {
@@ -127,7 +127,7 @@ body {
 .hero__title {
   font-family: "Avenir";
   font-size: xx-large;
-  color: #fff;
+  color: #ffffff;
   position: absolute;
   padding-left: 1rem;
   padding-top: 5rem;
