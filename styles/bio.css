@@ -391,8 +391,6 @@ body {
   margin-top: 3rem;
 }
 .comments__img--none {
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 50%;
   background-color: #dedede;
   min-width: 2.8rem;
