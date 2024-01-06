@@ -477,6 +477,10 @@ body {
     margin: 0.3rem 0 0.9rem 0;
     padding: 0.75rem;
 
+    &:focus {
+      outline: 0.063rem solid #323232;
+    }
+
     &::placeholder {
       color: #000000;
       font-family: avenir;
@@ -512,23 +516,6 @@ body {
   &--btn {
     @include tablet-and-desktop {
       text-align: right;
-    }
-  }
-}
-
-.comments {
-  &__name {
-    &:active,
-    &:focus,
-    &:hover,
-    &:target {
-      border: 0.063rem solid #323232;
-    }
-  }
-
-  &__textarea {
-    :focus {
-      border: 0.063rem solid #323232;
     }
   }
 }

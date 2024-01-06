@@ -419,6 +419,9 @@ body {
   margin: 0.3rem 0 0.9rem 0;
   padding: 0.75rem;
 }
+.comments__name:focus, .comments__textarea:focus {
+  outline: 0.063rem solid #323232;
+}
 .comments__name::-moz-placeholder, .comments__textarea::-moz-placeholder {
   color: #000000;
   font-family: avenir;
@@ -454,13 +457,6 @@ body {
   .comments--btn {
     text-align: right;
   }
-}
-
-.comments__name:active, .comments__textarea:active, .comments__name:focus, .comments__textarea:focus, .comments__name:hover, .comments__textarea:hover, .comments__name:target, .comments__textarea:target {
-  border: 0.063rem solid #323232;
-}
-.comments__textarea :focus {
-  border: 0.063rem solid #323232;
 }
 
 .display-comments__card {
