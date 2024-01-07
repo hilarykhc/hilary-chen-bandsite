@@ -154,52 +154,57 @@ function createShowsCard(showsData) {
 }
 
 //
-
-//title part//
+//--------------------------------------title part//
 
 //parents container//
 const showsTitleEl = document.querySelector(".shows__title");
 
 //  <h2 class="shows__title-name">Shows</h2>
 const showsTitleNameEl = document.createElement("h2");
-showsTitleNameEl.className.add("shows__title-name");
+showsTitleNameEl.classList.add("shows__title-name");
 showsTitleNameEl.textContent = "Shows";
 showsTitleEl.appendChild(showsTitleNameEl);
 
 //parents container
-const showsDivEl = document.querySelector(".shows");
+const showsSubheadTablet = document.querySelector(
+  ".shows__subhead--tabletAndDesktop"
+);
 
 // <ul class="shows__list" id="shows-list">
-const showsList = document.createElement("shows__list");
-showsList.id = "shows-list";
-showsDivEl.appendChild(showsList);
+//const showsList = document.createElement("ul");
+//showsList.classList.add("shows__list");//
+//showsList.id = "shows-list";
+//showsDivEl.appendChild(showsList);
 
 //<li>
-const showsListItem = document.createElement("li");
-showsList.appendChild(showsListItem);
+//const showsListItem = document.createElement("li");
+//showsList.appendChild(showsListItem);
 
 //<ul class="shows__subhead--tabletAndDesktop">
-const showsSubheadTablet = document.createElement("ul");
-showsSubheadTablet.className.add("shows__subhead--tabletAndDesktop");
-showsListItem.appendChild(showsSubheadTablet);
+//const showsSubheadTablet = document.createElement("ul");
+//showsSubheadTablet.classList.add("shows__subhead--tabletAndDesktop");
+//showsListItem.appendChild(showsSubheadTablet);
 
 //<li class="shows__date">date</li>
 //<li class="shows__venue">venue</li>
 //<li class="shows__location">location</li>
 
 const dateListItem = document.createElement("li");
-dateListItem.className.add("shows__date");
+dateListItem.classList.add("shows__date");
+dateListItem.textContent = "date";
 showsSubheadTablet.appendChild(dateListItem);
 
 const venueListItem = document.createElement("li");
-venueListItem.className.add("shows__venue");
+venueListItem.classList.add("shows__venue");
+venueListItem.textContent = "venue";
 showsSubheadTablet.appendChild(venueListItem);
 
 const locationListItem = document.createElement("li");
-locationListItem.className.add("shows__location");
+locationListItem.classList.add("shows__location");
+locationListItem.textContent = "location";
 showsSubheadTablet.appendChild(locationListItem);
 
 //<div class="shows__wrapper">
-const showsCardWrapper = document.createElement("div");
-showsCardWrapper.className.add("shows__wrapper");
-showsList.appendChild(showsCardWrapper);
+//const showsCardWrapper = document.createElement("div");
+//showsCardWrapper.classList.add("shows__wrapper");
+//showsList.appendChild(showsCardWrapper);

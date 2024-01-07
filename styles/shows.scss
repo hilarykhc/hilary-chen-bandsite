@@ -86,7 +86,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet-and-desktop {
   .nav {
     &__item {
       margin-left: 3.75rem;
@@ -111,7 +111,11 @@ body {
   width: 100%;
 
   @include tablet-and-desktop {
-    height: 32rem;
+    height: 33rem;
+  }
+
+  @include desktop {
+    height: 38rem;
   }
 
   &::before {
@@ -416,7 +420,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet-and-desktop {
   .footer {
     &__wrapper {
       padding: 0 2.25rem 2.25rem;
@@ -467,7 +471,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@include desktop {
   .footer {
     &__wrapper {
       padding: 0 6.75rem 2.25rem;

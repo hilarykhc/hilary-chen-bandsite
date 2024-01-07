@@ -366,7 +366,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet-and-desktop {
   .gallery {
     &__wrapper {
       padding-bottom: 0.75rem;
@@ -393,7 +393,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@include desktop {
   .gallery {
     &__wrapper {
       margin: 0 4.5rem;
@@ -618,7 +618,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet-and-desktop {
   .footer {
     &__wrapper {
       padding: 0 2.25rem 2.25rem;
@@ -669,7 +669,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@include desktop {
   .footer {
     &__wrapper {
       padding: 0 6.75rem 2.25rem;
