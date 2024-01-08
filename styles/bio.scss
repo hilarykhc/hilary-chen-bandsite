@@ -378,12 +378,8 @@ body {
   &__label {
     text-transform: uppercase;
     color: $primary-grey;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
-
-    @include tablet-and-desktop {
-      font-size: 0.9rem;
-    }
   }
 
   &__button {
