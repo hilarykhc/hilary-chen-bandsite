@@ -109,7 +109,7 @@ body {
 }
 .musicians__about--title {
   font-size: large;
-  font-weight: normal;
+  font-weight: 500;
   padding: 0 0 1rem;
 }
 .musicians__about--description-1, .musicians__about--description-2 {
