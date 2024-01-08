@@ -1,5 +1,3 @@
-//DATA STRUCTURE
-
 const shows = [
   {
     label1: "date",
@@ -62,25 +60,16 @@ const shows = [
   },
 ];
 
-//parents container
+//target parents container
 const showsContainers = document.querySelector(".shows__list");
-
-//<div class="shows__title">
-//const divEl = document.createElement("div");
-//divEl.classList.add("shows__title");
-//concertsContainers.appendChild(divEl);
-
-//<h2 class="shows__title-name">
-//const h2El = document.createElement("h2");
-//h2El.classList.add("shows__title-name");
 
 for (let i = 0; i < shows.length; i++) {
   let showsObj = shows[i];
   createShowsCard(showsObj);
 }
 
+//new function to create elements
 function createShowsCard(showsData) {
-  // <li class="shows__cards">
   const itemEl = document.createElement("li");
   itemEl.classList.add("shows__cards");
   showsContainers.appendChild(itemEl);
@@ -90,13 +79,11 @@ function createShowsCard(showsData) {
     this.classList.toggle("shows__cards--selected");
   });
 
-  //<ul class="shows__cards--sublist">
+  //new elements
   const sublistEl = document.createElement("ul");
   sublistEl.classList.add("shows__cards--sublist");
   itemEl.appendChild(sublistEl);
 
-  //<li class="shows__label">date</li>
-  //<li class="shows__info--date">Mon Sep 06,2021</li>
   const subitemEl = document.createElement("li");
   subitemEl.classList.add("shows__label");
   subitemEl.innerText = showsData.label1;
@@ -107,13 +94,10 @@ function createShowsCard(showsData) {
   newSubitemEl.innerText = showsData.date;
   sublistEl.appendChild(newSubitemEl);
 
-  //<ul class="shows__cards--sublist">
   const sublist_2El = document.createElement("ul");
   sublist_2El.classList.add("shows__cards--sublist");
   itemEl.appendChild(sublist_2El);
 
-  //<li class="shows__label">venue</li>
-  //<li class="shows__info--venue">Ronald Lane</li>
   const subitem_2El = document.createElement("li");
   subitem_2El.classList.add("shows__label");
   subitem_2El.innerText = showsData.label2;
@@ -124,13 +108,10 @@ function createShowsCard(showsData) {
   newSubitem_2El.innerText = showsData.venue;
   sublist_2El.appendChild(newSubitem_2El);
 
-  //<ul class="shows__cards--sublist">
   const sublist_3El = document.createElement("ul");
   sublist_3El.classList.add("shows__cards--sublist");
   itemEl.appendChild(sublist_3El);
 
-  //<li class="shows__label">location</li>
-  //<li class="shows__info--location">San Franciso, CA</li>
   const subitem_3El = document.createElement("li");
   subitem_3El.classList.add("shows__label");
   subitem_3El.innerText = showsData.label3;
@@ -141,54 +122,33 @@ function createShowsCard(showsData) {
   newSubitem_3El.innerText = showsData.location;
   sublist_3El.appendChild(newSubitem_3El);
 
-  //<ul class="shows__cards--sublist">
   const sublist_4El = document.createElement("ul");
   sublist_4El.classList.add("shows__cards--sublist");
   itemEl.appendChild(sublist_4El);
 
-  //<button class="shows__button">Buy Tickets</button>
   const buttonEl = document.createElement("button");
   buttonEl.classList.add("shows__button");
   buttonEl.innerText = showsData.button;
   sublist_4El.appendChild(buttonEl);
 }
 
-//
-//--------------------------------------title part//
+//add itle "Shows" and labels for tabletAndDesktop
 
-//parents container//
+//target parents container//
 const showsTitleEl = document.querySelector(".shows__title");
 
-//  <h2 class="shows__title-name">Shows</h2>
+//add title name
 const showsTitleNameEl = document.createElement("h2");
 showsTitleNameEl.classList.add("shows__title-name");
 showsTitleNameEl.textContent = "Shows";
 showsTitleEl.appendChild(showsTitleNameEl);
 
-//parents container
+//target parents container
 const showsSubheadTablet = document.querySelector(
   ".shows__subhead--tabletAndDesktop"
 );
 
-// <ul class="shows__list" id="shows-list">
-//const showsList = document.createElement("ul");
-//showsList.classList.add("shows__list");//
-//showsList.id = "shows-list";
-//showsDivEl.appendChild(showsList);
-
-//<li>
-//const showsListItem = document.createElement("li");
-//showsList.appendChild(showsListItem);
-
-//<ul class="shows__subhead--tabletAndDesktop">
-//const showsSubheadTablet = document.createElement("ul");
-//showsSubheadTablet.classList.add("shows__subhead--tabletAndDesktop");
-//showsListItem.appendChild(showsSubheadTablet);
-
-//<li class="shows__date">date</li>
-//<li class="shows__venue">venue</li>
-//<li class="shows__location">location</li>
-
+//add lables for tablet and desktop
 const dateListItem = document.createElement("li");
 dateListItem.classList.add("shows__date");
 dateListItem.textContent = "date";
@@ -203,8 +163,3 @@ const locationListItem = document.createElement("li");
 locationListItem.classList.add("shows__location");
 locationListItem.textContent = "location";
 showsSubheadTablet.appendChild(locationListItem);
-
-//<div class="shows__wrapper">
-//const showsCardWrapper = document.createElement("div");
-//showsCardWrapper.classList.add("shows__wrapper");
-//showsList.appendChild(showsCardWrapper);

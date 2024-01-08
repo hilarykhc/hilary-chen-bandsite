@@ -46,7 +46,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet-and-desktop {
   .hero {
     height: 28rem;
 
@@ -58,7 +58,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@include desktop {
   .hero {
     height: 39rem;
 
@@ -82,7 +82,6 @@ body {
     &--img {
       width: 100%;
       max-width: 46rem;
-      //max-height: 13.75rem;
     }
 
     &--title {
@@ -141,7 +140,6 @@ body {
       &--img {
         width: 100%;
         max-width: 69rem;
-        //height: 23rem;
         margin: 0 3rem;
         max-height: none;
         padding: 0 3rem;
@@ -194,8 +192,6 @@ body {
 
     &__quote {
       &--img {
-        //max-width: 96rem;
-        //height: 32.75rem;
         margin: 0 5rem;
         max-height: none;
         width: 85%;

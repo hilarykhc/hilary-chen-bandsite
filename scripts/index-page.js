@@ -1,5 +1,3 @@
-//DATA STRUCTURE
-
 const comments = [
   {
     name: "Connor Walton",
@@ -23,7 +21,7 @@ const comments = [
   },
 ];
 
-//parents container
+//target parents container
 const commentsContainer = document.querySelector(
   ".display-comments__container"
 );
@@ -33,41 +31,34 @@ for (let i = 0; i < comments.length; i++) {
   createCommentsCard(commentsObj);
 }
 
+//function to create elements
 function createCommentsCard(commentsData) {
-  //   <section class="display-comments">
+  //new elements
   const sectionEl = document.createElement("section");
   sectionEl.classList.add("display-comments");
   commentsContainer.appendChild(sectionEl);
 
-  //<ul class="display-comments__list" id="comments-list">
   const listEl = document.createElement("ul");
   listEl.classList.add("display-comments__list");
   listEl.setAttribute("id", "comments-list");
   sectionEl.appendChild(listEl);
 
-  //<div class="display-comments__card" id="comments-list-1">
   const cardEl = document.createElement("div");
   cardEl.classList.add("display-comments__card");
   cardEl.setAttribute("id", "comments-list-1");
   listEl.appendChild(cardEl);
 
-  //<div class="comments__img--none"></div>
   const imgEl = document.createElement("div");
   imgEl.classList.add("comments__img--none");
   cardEl.appendChild(imgEl);
 
-  //<div class="display-comments__content">
   const contentEl = document.createElement("div");
   contentEl.classList.add("display-comments__content");
   cardEl.appendChild(contentEl);
 
-  //<div class="display-comments__name-date">
   const nameDateEl = document.createElement("div");
   nameDateEl.classList.add("display-comments__name-date");
   contentEl.appendChild(nameDateEl);
-
-  // <p class="display-comments__name">Connor Walton</p>
-  //<p class="display-comments__date">02/17/2021</p>
 
   const nameEl = document.createElement("p");
   nameEl.classList.add("display-comments__name");
@@ -79,8 +70,8 @@ function createCommentsCard(commentsData) {
   dateEl.innerText = commentsData.date;
   nameDateEl.appendChild(dateEl);
 
-  // <div>
-  //     <p class="display-comments__text"></p>
+  // add <div>
+  // add    <p class="display-comments__text"></p>
   const divEl = document.createElement("div");
   contentEl.appendChild(divEl);
 
@@ -90,19 +81,18 @@ function createCommentsCard(commentsData) {
   divEl.appendChild(textEl);
 }
 
-// ///// //
-
+// input and textarea functions
 document.addEventListener("DOMContentLoaded", function () {
   const commentsContainer = document.querySelector(
     ".display-comments__container"
   );
   const form = document.getElementById("form");
 
-  // Event listener for form
+  // event listener
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Get form values
+    // get values
     const name = document.getElementById("name").value;
     const comment = document.getElementById("comment").value;
     const currentDate = new Date().toLocaleDateString("en-US", {
@@ -111,25 +101,25 @@ document.addEventListener("DOMContentLoaded", function () {
       year: "numeric",
     });
 
-    // Create new comment object
+    // comment object
     const newComment = {
       name: name,
       date: currentDate,
       text: comment,
-      headshot: "grey circular object", // Add a default headshot or update it based on user input
+      headshot: "grey circular object",
     };
 
-    // Add new comment to comments array
+    // add new comment to array
     comments.unshift(newComment);
 
-    // Clear form fields
+    // clearn form fields
     document.getElementById("name").value = "";
     document.getElementById("comment").value = "";
 
-    // Clear existing comments in the display
+    // clear existing comments
     commentsContainer.innerHTML = "";
 
-    // Render all comments, including the new one
+    // render comments
     for (let i = 0; i < comments.length; i++) {
       let commentsObj = comments[i];
       createCommentsCard(commentsObj);
