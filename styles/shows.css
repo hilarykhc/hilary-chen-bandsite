@@ -33,79 +33,6 @@ body {
   margin: 0;
 }
 
-.header {
-  background-color: #323232;
-  height: 7.2rem;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    height: 4.98rem;
-  }
-  .header__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0.25rem 2.25rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1280px) {
-  .header__wrapper {
-    padding: 0.25rem 6.75rem;
-  }
-}
-.header__brand {
-  display: flex;
-  justify-content: center;
-}
-.header__logo {
-  margin: 1.5rem 0 0 0;
-  width: 10.25rem;
-}
-@media screen and (min-width: 768px) {
-  .header__logo {
-    width: auto;
-    margin-top: 1.75rem;
-  }
-}
-
-.nav__list {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding-left: 0;
-}
-.nav__item {
-  font-family: "Avenir";
-  list-style: none;
-  width: 50%;
-}
-.nav__item--active {
-  border-bottom: 5px solid #ffffff;
-  padding-bottom: 0.95rem;
-}
-.nav__link, .nav__link--active {
-  color: #ffffff;
-  text-decoration: none;
-}
-.nav__link--active {
-  font-weight: bold;
-}
-.nav__link--inactive {
-  color: #e1e1e1;
-}
-
-@media screen and (min-width: 768px) {
-  .nav__item {
-    margin-left: 3.75rem;
-    font-size: 1rem;
-  }
-  .nav__item--active {
-    padding-bottom: 1.05rem;
-  }
-  .nav__list {
-    margin-top: 2rem;
-  }
-}
 .hero {
   background-image: url(/assets/Images/hero-shows.jpg);
   background-size: cover;
@@ -133,6 +60,12 @@ body {
   height: 100%;
   background-color: #323232;
   opacity: 40%;
+}
+@media screen and (min-width: 1280px) {
+  .hero__section {
+    padding-top: 10rem;
+    padding-left: 5rem;
+  }
 }
 .hero__title {
   font-family: "Avenir";
@@ -174,6 +107,12 @@ body {
     margin: 18rem 2.25rem 0;
     width: 43%;
     min-width: 26rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__iframe {
+    padding-left: 7rem;
+    margin: 5.5rem 2.25rem 0 38rem;
   }
 }
 
@@ -324,8 +263,16 @@ ul {
     align-items: center;
   }
 }
+.shows__info--date {
+  font-weight: 500;
+}
 @media screen and (min-width: 768px) {
-  .shows__info--date, .shows__info--location, .shows__info--venue {
+  .shows__info--date {
+    min-width: 8.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__info--venue, .shows__info--location {
     min-width: 8.5rem;
   }
 }

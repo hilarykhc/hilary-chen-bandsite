@@ -17,92 +17,6 @@ body {
   margin: 0;
 }
 
-.header {
-  background-color: $bandsite-black;
-  height: 7.2rem;
-
-  @include tablet-and-desktop {
-    height: 4.98rem;
-
-    &__wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      padding: 0.25rem 2.25rem;
-
-      @include desktop {
-        padding: 0.25rem 6.75rem;
-      }
-    }
-  }
-
-  &__brand {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__logo {
-    margin: 1.5rem 0 0 0;
-    width: 10.25rem;
-
-    @include tablet-and-desktop {
-      width: auto;
-      margin-top: 1.75rem;
-    }
-  }
-}
-
-.nav {
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  &__item {
-    font-family: "Avenir";
-    list-style: none;
-    width: 50%;
-
-    &--active {
-      border-bottom: 5px solid $pure-white;
-      padding-bottom: 0.95rem;
-    }
-  }
-
-  &__link {
-    color: $pure-white;
-    text-decoration: none;
-
-    &--active {
-      @extend .nav__link;
-      font-weight: bold;
-    }
-
-    &--inactive {
-      color: $secondary-grey;
-    }
-  }
-}
-
-@include tablet-and-desktop {
-  .nav {
-    &__item {
-      margin-left: 3.75rem;
-      font-size: 1rem;
-
-      &--active {
-        padding-bottom: 1.05rem;
-      }
-    }
-
-    &__list {
-      margin-top: 2rem;
-    }
-  }
-}
-
 .hero {
   background-image: url(/assets/Images/hero-shows.jpg);
   background-size: cover;
@@ -128,6 +42,13 @@ body {
     height: 100%;
     background-color: $bandsite-black;
     opacity: 40%;
+  }
+
+  &__section {
+    @include desktop {
+      padding-top: 10rem;
+      padding-left: 5rem;
+    }
   }
 
   &__title {
@@ -169,6 +90,11 @@ body {
       margin: 18rem 2.25rem 0;
       width: 43%;
       min-width: 26rem;
+    }
+
+    @include desktop {
+      padding-left: 7rem;
+      margin: 5.5rem 2.25rem 0 38rem;
     }
   }
 }
@@ -346,17 +272,21 @@ ul {
 
   &__info {
     &--date {
+      font-weight: 500;
+
       @include tablet-and-desktop {
         min-width: 8.5rem;
       }
     }
 
     &--venue {
-      @extend .shows__info--date;
+      @include tablet-and-desktop {
+        min-width: 8.5rem;
+      }
     }
 
     &--location {
-      @extend .shows__info--date;
+      @extend .shows__info--venue;
     }
   }
 }
