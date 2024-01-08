@@ -42,7 +42,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 33rem;
+    height: 32rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -61,6 +61,11 @@ body {
   background-color: #323232;
   opacity: 40%;
 }
+@media screen and (min-width: 768px) {
+  .hero__section {
+    padding-top: 0.25rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .hero__section {
     padding-top: 10rem;
@@ -74,6 +79,7 @@ body {
   position: absolute;
   padding-left: 1rem;
   padding-top: 5rem;
+  max-width: 22rem;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
@@ -81,10 +87,17 @@ body {
     padding-top: 5.5rem;
     font-size: 3.5rem;
     width: 35rem;
+    max-width: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    width: 33rem;
   }
 }
 .hero__album {
   font-weight: 500;
+  font-size: 1.25rem;
   color: #ffffff;
   position: absolute;
   padding: 2.75rem 1rem 1rem;
@@ -181,10 +194,10 @@ ul {
   }
 }
 .shows__label {
-  color: #a1a1a1;
+  color: #afafaf;
   text-transform: uppercase;
   padding: 1rem 0 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -193,7 +206,7 @@ ul {
   }
 }
 .shows__date, .shows__location, .shows__venue {
-  color: #a1a1a1;
+  color: #afafaf;
   text-transform: uppercase;
   padding: 1rem 0 0;
   font-size: 0.9rem;
@@ -239,6 +252,7 @@ ul {
   border-bottom: 0.063rem solid #e1e1e1;
   padding: 0 0 1rem 0;
   flex-direction: column;
+  line-height: 1.75rem;
 }
 .shows__cards--selected {
   background-color: #e1e1e1;

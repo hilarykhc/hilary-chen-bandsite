@@ -331,8 +331,8 @@ body {
 
     &--none {
       border-radius: 50%;
-      background-color: $profile-color;
-      min-width: 2.8rem;
+      background-color: $secondary-grey;
+      min-width: 2.7rem;
       height: 2.5rem;
     }
   }
@@ -365,7 +365,7 @@ body {
     }
 
     &::placeholder {
-      color: #000000;
+      color: $bandsite-black;
       font-family: "Avenir";
     }
   }
@@ -377,9 +377,13 @@ body {
 
   &__label {
     text-transform: uppercase;
-    color: $label-color;
-    font-size: 0.9rem;
+    color: $primary-grey;
+    font-size: 0.8rem;
     font-weight: 600;
+
+    @include tablet-and-desktop {
+      font-size: 0.9rem;
+    }
   }
 
   &__button {
@@ -389,7 +393,8 @@ body {
     text-transform: uppercase;
     border-radius: 0.25rem;
     border: none;
-    padding: 0.5rem 2rem;
+    padding: 0.672rem 2rem;
+    font-size: medium;
 
     &:hover {
       background-color: $pure-black;
@@ -398,6 +403,7 @@ body {
 
     @include tablet-and-desktop {
       width: initial;
+      padding: 0.672rem 2.5rem;
     }
   }
 
@@ -418,6 +424,7 @@ body {
   &__content {
     padding: 0 0 0 1rem;
     width: 45rem;
+    line-height: 1.5rem;
 
     @include tablet-and-desktop {
       width: 100%;
@@ -436,9 +443,10 @@ body {
   &__name {
     font-weight: 600;
     padding-bottom: 0.5rem;
+    color: $bandsite-black;
   }
 
   &__date {
-    color: $label-color;
+    color: $primary-grey;
   }
 }
