@@ -81,48 +81,37 @@ function createCommentsCard(commentsData) {
   divEl.appendChild(textEl);
 }
 
-// input and textarea functions
-document.addEventListener("DOMContentLoaded", function () {
-  const commentsContainer = document.querySelector(
-    ".display-comments__container"
-  );
-  const form = document.getElementById("form");
+function renderAllComments(allComments) {
+  commentsContainer.innerHTML = "";
 
-  // event listener
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // get values
-    const name = document.getElementById("name").value;
-    const comment = document.getElementById("comment").value;
-    const currentDate = new Date().toLocaleDateString("en-US", {
-      month: "2-digit",
-      day: "2-digit",
-      year: "numeric",
-    });
-
-    // comment object
-    const newComment = {
-      name: name,
-      date: currentDate,
-      text: comment,
-      headshot: "grey circular object",
-    };
-
-    // add new comment to array
-    comments.unshift(newComment);
-
-    // clearn form fields
-    document.getElementById("name").value = "";
-    document.getElementById("comment").value = "";
-
-    // clear existing comments
-    commentsContainer.innerHTML = "";
-
-    // render comments
-    for (let i = 0; i < comments.length; i++) {
-      let commentsObj = comments[i];
-      createCommentsCard(commentsObj);
-    }
+  allComments.forEach((comment) => {
+    createCommentsCard(comment);
   });
+}
+
+renderAllComments(comments);
+
+const commentsFormEl = document.getElementById("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const comment = document.getElementById("comment").value;
+  const currentDate = new Date().toLocaleDateString("en-US", {
+    month: "2-digit",
+    day: "2-digit",
+    year: "numeric",
+  });
+
+  const newComment = {
+    name: name,
+    date: currentDate,
+    text: comment,
+    headshot: "grey circular object",
+  };
+
+  comments.unshift(newComment);
+  renderAllComments(comments);
+
+  commentsFormEl.reset();
 });
