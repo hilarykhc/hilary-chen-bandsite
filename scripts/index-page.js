@@ -81,6 +81,9 @@ function createCommentsCard(commentsData) {
   divEl.appendChild(textEl);
 }
 
+/*
+//add comments
+
 function renderAllComments(allComments) {
   commentsContainer.innerHTML = "";
 
@@ -115,3 +118,5 @@ form.addEventListener("submit", function (event) {
 
   commentsFormEl.reset();
 });
+
+*/
