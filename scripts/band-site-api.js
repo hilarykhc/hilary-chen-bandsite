@@ -74,60 +74,12 @@ class BandSiteApi {
 
       console.log(displayComments);
     } catch (error) {
-      console.error("Failed to retrieve info: ", error);
-    }
-  }
-
-  // post new comments ---------------------------------------///////
-  async postComment() {
-    try {
-      const response = await axios.post(
-        `${this.baseUrl}comments?api_key=${this.apiKey}`
-      );
-      const newComment = response.data;
-      console.log(newComment);
-
-      function renderAllComments(allComments) {
-        commentsContainer.innerHTML = "";
-
-        allComments.forEach((comment) => {
-          createCommentsCard(comment);
-        });
-      }
-      // parents container
-      const commentsFormEl = document.getElementById("form");
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const name = `${comment.name}`;
-        const comment = `${comment.comment}`;
-        const currentDate = new Date().toLocaleDateString("en-US", {
-          month: "2-digit",
-          day: "2-digit",
-          year: "numeric",
-        });
-
-        const newComment = {
-          name: name,
-          date: currentDate,
-          text: comment,
-          headshot: "grey circular object",
-        };
-
-        comments.unshift(newComment);
-        renderAllComments(comments);
-
-        commentsFormEl.reset();
-      });
-
-      console.log(postCommentRes);
-    } catch (error) {
-      console.error("Both name and comment must be included", error);
+      console.error("Failed to display comment", error);
     }
   }
 }
 
-const apiKey = "ba1c9125-0dc0-4640-bd25-7cae703a705d";
+const apiKey = "6748bc1f-abe2-40ad-8213-f950811ead8f";
 const bandSiteApi = new BandSiteApi(apiKey);
 
 async function displayComments() {
@@ -138,133 +90,6 @@ async function displayComments() {
   }
 }
 
-async function renderAllComments() {
-  try {
-    await bandSiteApi.postComment();
-  } catch (error) {
-    console.error("Error", error);
-  }
-}
-
 displayComments();
-postComment();
 
-// adding comment
-/*
-async postComment () {
-  try {
-    const postCommentRes = await axios.post(
-      `${this.baseUrl}comments?api_key=${this.apiKey}`
-    );
-    const newComment = response.data;
-    console.log(newComment);
-
-    function renderAllComments(allComments) {
-      commentsContainer.innerHTML = "";
-
-      allComments.forEach((comment) => {
-        createCommentsCard(comment);
-      });
-    }
-    // parents container
-    const commentsFormEl = document.getElementById("form");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = `${comment.name}`;
-      const comment = `${comment.comment}`;
-      const currentDate = new Date().toLocaleDateString("en-US", {
-        month: "2-digit",
-        day: "2-digit",
-        year: "numeric",
-      });
-
-      const newComment = {
-        name: name,
-        date: currentDate,
-        text: comment,
-        headshot: "grey circular object",
-      };
-
-      comments.unshift(newComment);
-      renderAllComments(comments);
-
-      commentsFormEl.reset();
-    });
-
-    console.log(postCommentRes);
-  } catch (error) {
-    console.error("Both name and comment must be included", error);
-  }
-};
-
-postComment();
-*/
-
-/*
-//add comments
-class BandSiteApi {
-  constructor(apiKey) {
-    this.apiKey = apiKey;
-    this.baseUrl = "https://project-1-api.herokuapp.com/";
-  }
-
-  async postComment(comment) {
-    try {
-      const postCommentRes = await axios.post(
-        `${this.baseUrl}comments?api_key=${this.apiKey}`,
-        comment
-      );
-
-      console.log("SUCCESSFUL", postCommentRes.data);
-
-     
-    } catch (error) {
-      console.error("ERROR", error);
-    }
-  }
-
-
-}
-
-function renderAllComments(allComments) {
-  commentsContainer.innerHTML = "";
-
-  allComments.forEach((comment) => {
-    createCommentsCard(comment);
-  });
-}
-
-const bandSiteApi = new BandSiteApi("ba1c9125-0dc0-4640-bd25-7cae703a705d");
-
-renderAllComments(comments);
-
-const commentsFormEl = document.getElementById("form");
-commentsFormEl.addEventListener("submit", async function (event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const commentText = document.getElementById("comment").value;
-  const currentDate = new Date().toLocaleDateString("en-US", {
-    month: "2-digit",
-    day: "2-digit",
-    year: "numeric",
-  });
-
-  const newComment = {
-    name: name,
-    date: currentDate,
-    text: commentText,
-    headshot: "grey circular object",
-  };
-
-  await bandSiteApi.postComment(newComment);
-
-  
-  comments.unshift(newComment);
-  renderAllComments(comments);
-
-  commentsFormEl.reset();
-});
-
-*/
+//POST request

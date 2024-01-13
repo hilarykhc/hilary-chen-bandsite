@@ -31,6 +31,7 @@ for (let i = 0; i < comments.length; i++) {
   createCommentsCard(commentsObj);
 }
 
+/*
 //function to create elements
 function createCommentsCard(commentsData) {
   //new elements
@@ -81,7 +82,8 @@ function createCommentsCard(commentsData) {
   divEl.appendChild(textEl);
 }
 
-/*
+*/
+
 //add comments
 
 function renderAllComments(allComments) {
@@ -118,5 +120,3 @@ form.addEventListener("submit", function (event) {
 
   commentsFormEl.reset();
 });
-
-*/
