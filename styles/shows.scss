@@ -3,20 +3,6 @@
 @use "./partials/variables" as *;
 @use "./partials/typography" as *;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-p,
-body {
-  font-family: "Avenir";
-  margin: 0;
-}
-
 .hero {
   background-image: url(/assets/Images/hero-shows.jpg);
   background-size: cover;
@@ -244,14 +230,17 @@ ul {
     flex-direction: column;
     line-height: 1.75rem;
 
-    &--selected {
+    /*&--selected {
       background-color: $secondary-grey;
     }
+    
 
     &:not(.shows__cards--selected):hover {
       background-color: $gallery-background;
       cursor: pointer;
     }
+
+    */
 
     &--sublist {
       padding: 0;

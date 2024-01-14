@@ -190,6 +190,10 @@ class BandSiteApi {
         showsContainers.appendChild(itemEl);
 
         itemEl.addEventListener("click", function () {
+          const allItems = document.querySelectorAll(".shows__cards");
+          allItems.forEach((item) => {
+            item.classList.remove("shows__cards--selected");
+          });
           this.classList.toggle("shows__cards--selected");
         });
 

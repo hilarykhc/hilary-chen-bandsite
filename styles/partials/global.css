@@ -29,7 +29,7 @@ h1,
 h2,
 p,
 body {
-  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-family: "Avenir Next Pro Lt", Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -84,14 +84,12 @@ body {
   padding-bottom: 0.95rem;
 }
 .nav__link, .nav__link--active {
-  color: #ffffff;
+  color: #e1e1e1;
   text-decoration: none;
 }
 .nav__link--active {
+  color: #ffffff;
   font-weight: bold;
-}
-.nav__link--inactive {
-  color: #e1e1e1;
 }
 
 @media screen and (min-width: 768px) {
