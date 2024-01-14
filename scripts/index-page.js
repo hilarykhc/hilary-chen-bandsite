@@ -1,3 +1,4 @@
+/*
 const comments = [
   {
     name: "Connor Walton",
@@ -31,7 +32,6 @@ for (let i = 0; i < comments.length; i++) {
   createCommentsCard(commentsObj);
 }
 
-/*
 //function to create elements
 function createCommentsCard(commentsData) {
   //new elements
@@ -82,8 +82,6 @@ function createCommentsCard(commentsData) {
   divEl.appendChild(textEl);
 }
 
-*/
-
 //add comments
 
 function renderAllComments(allComments) {
@@ -96,6 +94,7 @@ function renderAllComments(allComments) {
 
 renderAllComments(comments);
 
+//target form
 const commentsFormEl = document.getElementById("form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -108,6 +107,7 @@ form.addEventListener("submit", function (event) {
     year: "numeric",
   });
 
+  //check the names for these from console. may have to change the text-comment, date-timestamp
   const newComment = {
     name: name,
     date: currentDate,
@@ -120,3 +120,6 @@ form.addEventListener("submit", function (event) {
 
   commentsFormEl.reset();
 });
+
+
+*/
