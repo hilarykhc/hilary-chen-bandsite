@@ -1,40 +1,92 @@
-/*
-const comments = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    headshot: "grey circular object",
-  },
+class BandSiteApi {
+  constructor(apiKey) {
+    this.apiKey = apiKey;
+    this.baseUrl = "https://project-1-api.herokuapp.com/";
+  }
 
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    headshot: "grey circular object",
-  },
+  async getComments() {
+    try {
+      const response = await axios.get(
+        `${this.baseUrl}comments?api_key=${this.apiKey}`
+      );
+      const displayComments = response.data.sort(
+        (a, b) => b.timestamp - a.timestamp
+      );
 
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    text: " I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    headshot: "grey circular object",
-  },
-];
+      const commentsContainer = document.querySelector(
+        ".display-comments__container"
+      );
 
-//target parents container
-const commentsContainer = document.querySelector(
-  ".display-comments__container"
-);
+      commentsContainer.innerHTML = "";
 
-for (let i = 0; i < comments.length; i++) {
-  let commentsObj = comments[i];
-  createCommentsCard(commentsObj);
+      displayComments.forEach((comment) => {
+        createCommentCard(comment);
+      });
+    } catch (error) {
+      console.error("Oh no! Failed", error);
+    }
+  }
+
+  async postComment(comment) {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      await axios.post(
+        `${this.baseUrl}comments?api_key=${this.apiKey}`,
+        comment,
+        config
+      );
+
+      await this.getComments(); // Refresh comments after posting
+
+      const commentsFormEl = document.getElementById("form");
+      commentsFormEl.reset();
+    } catch (error) {
+      console.error("Uh-oh. Failed to post comment", error);
+    }
+  }
 }
 
-//function to create elements
-function createCommentsCard(commentsData) {
-  //new elements
+const apiKey = "6748bc1f-abe2-40ad-8213-f950811ead8f";
+const bandSiteApi = new BandSiteApi(apiKey);
+
+const commentsFormEl = document.getElementById("form");
+commentsFormEl.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  console.log("form submitted"); //ok
+
+  //async function allComment() {
+  try {
+    const name = document.getElementById("name").value;
+    const userComment = document.getElementById("comment").value;
+    const currentDate = new Date().toLocaleDateString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+    });
+
+    const newComment = {
+      name: name,
+      //timestamp: currentDate,
+      comment: userComment,
+      //headshot: "grey circular object",
+    };
+
+    await bandSiteApi.postComment(newComment);
+  } catch (error) {
+    console.error("oopsies. Error", error);
+  }
+});
+
+function createCommentCard(comment) {
+  const commentsContainer = document.querySelector(
+    ".display-comments__container"
+  );
+
   const sectionEl = document.createElement("section");
   sectionEl.classList.add("display-comments");
   commentsContainer.appendChild(sectionEl);
@@ -63,63 +115,27 @@ function createCommentsCard(commentsData) {
 
   const nameEl = document.createElement("p");
   nameEl.classList.add("display-comments__name");
-  nameEl.innerText = commentsData.name;
+  nameEl.textContent = `${comment.name}`;
   nameDateEl.appendChild(nameEl);
 
   const dateEl = document.createElement("p");
   dateEl.classList.add("display-comments__date");
-  dateEl.innerText = commentsData.date;
+  const commentDate = new Date(comment.timestamp);
+  const correctDate = commentDate.toLocaleDateString("en-US", {
+    month: "2-digit",
+    day: "2-digit",
+    year: "numeric",
+  });
+  dateEl.textContent = correctDate;
   nameDateEl.appendChild(dateEl);
 
-  // add <div>
-  // add    <p class="display-comments__text"></p>
   const divEl = document.createElement("div");
   contentEl.appendChild(divEl);
 
   const textEl = document.createElement("p");
   textEl.classList.add("display-comments__text");
-  textEl.innerText = commentsData.text;
+  textEl.textContent = `${comment.comment}`;
   divEl.appendChild(textEl);
 }
 
-//add comments
-
-function renderAllComments(allComments) {
-  commentsContainer.innerHTML = "";
-
-  allComments.forEach((comment) => {
-    createCommentsCard(comment);
-  });
-}
-
-renderAllComments(comments);
-
-//target form
-const commentsFormEl = document.getElementById("form");
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const comment = document.getElementById("comment").value;
-  const currentDate = new Date().toLocaleDateString("en-US", {
-    month: "2-digit",
-    day: "2-digit",
-    year: "numeric",
-  });
-
-  //check the names for these from console. may have to change the text-comment, date-timestamp
-  const newComment = {
-    name: name,
-    date: currentDate,
-    text: comment,
-    headshot: "grey circular object",
-  };
-
-  comments.unshift(newComment);
-  renderAllComments(comments);
-
-  commentsFormEl.reset();
-});
-
-
-*/
+bandSiteApi.getComments();

@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir Next Pro Lt";
   src: url("/assets/Font/AvenirNextLTPro-Bold.otf");
-  src: url("/assets/Font/Alternative files/AvenirNextLTPro-Bold");
+  src: url("/assets/Font/Alternative/AvenirNextLTPro-Bold.ttf");
   font-weight: bolder;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir Next Pro Lt";
   src: url("/assets/Font/AvenirNextLTPro-Demi.otf");
-  src: url("/assets/Font/Alternative files/AvenirNextLTPro-Demi");
+  src: url("/assets/Font/Alternative/files/AvenirNextLTPro-Demi");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir Next Pro Lt";
   src: url("/assets/Font/AvenirNextLTPro-Regular.otf");
-  src: url("/assets/Font/Alternative files/AvenirNextLTPro-Regular");
+  src: url("/assets/Font/Alternative/files/AvenirNextLTPro-Regular");
   font-weight: normal;
   font-style: normal;
 }
@@ -240,17 +240,13 @@ ul {
   padding: 0 0 1rem 0;
   flex-direction: column;
   line-height: 1.75rem;
-  /*&--selected {
-    background-color: $secondary-grey;
-  }
-
-
-  &:not(.shows__cards--selected):hover {
-    background-color: $gallery-background;
-    cursor: pointer;
-  }
-
-  */
+}
+.shows__cards--selected {
+  background-color: #e1e1e1;
+}
+.shows__cards:hover {
+  background-color: #fafafa;
+  cursor: pointer;
 }
 .shows__cards--sublist {
   padding: 0;

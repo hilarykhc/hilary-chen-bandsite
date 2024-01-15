@@ -230,17 +230,14 @@ ul {
     flex-direction: column;
     line-height: 1.75rem;
 
-    /*&--selected {
+    &--selected {
       background-color: $secondary-grey;
     }
-    
 
-    &:not(.shows__cards--selected):hover {
+    &:hover {
       background-color: $gallery-background;
       cursor: pointer;
     }
-
-    */
 
     &--sublist {
       padding: 0;
