@@ -8,14 +8,14 @@
 @font-face {
   font-family: "Avenir Next Pro Lt";
   src: url("/assets/Font/AvenirNextLTPro-Demi.otf");
-  src: url("/assets/Font/Alternative/files/AvenirNextLTPro-Demi");
+  src: url("/assets/Font/Alternative/AvenirNextLTPro-Demi");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next Pro Lt";
   src: url("/assets/Font/AvenirNextLTPro-Regular.otf");
-  src: url("/assets/Font/Alternative/files/AvenirNextLTPro-Regular");
+  src: url("/assets/Font/Alternative/AvenirNextLTPro-Regular");
   font-weight: normal;
   font-style: normal;
 }
